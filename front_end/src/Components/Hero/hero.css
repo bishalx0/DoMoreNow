@@ -1,0 +1,29 @@
+.heroWrapper{
+    display:flex;
+}
+.heroCharacter{
+    display:flex;
+
+}
+.heroHeading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.hero{
+    padding:25px;
+}
+
+.btn button{
+    font-size: 15px;
+    font-weight: 500;
+    padding:7px 15px;
+    border-radius:20px;
+    transition: 0.3s all ease;
+    cursor: pointer;
+}
+.btn button:hover{
+    background-color:red;
+    color:#fff;
+}
