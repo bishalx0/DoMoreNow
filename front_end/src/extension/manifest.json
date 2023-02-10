@@ -1,0 +1,14 @@
+{
+    "manifest_version" : 2,
+    "name" : "Student+ - Focus Study",
+    "version" : "1.0.1",
+    "content_scripts" : [
+        {
+            "matches" : ["<all_urls>"],
+            "js" : ["./popup-files/popup.js"]
+        }
+    ],
+    "browser_action":{
+        "default_popup" : "./popup-files/popup.html"
+    }
+}
