@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './App.module.css';
 import { Link } from 'react-router-dom';
 import NavBar from './Components/NavBar/NavBar';
-import Hero from './Components/Todo/Hero/Hero';
+import Hero from './Components/Hero/Hero';
 
 const App = () => {
   return(

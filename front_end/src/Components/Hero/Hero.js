@@ -11,8 +11,8 @@ const Hero = () => {
                     <p> Student+ is an automated distraction eliminator that enables you to take control over your priorities once again. With Student+, you can finally be free to pursue your goals distraction-free.</p>
                 </div>
                 <div className="heroCharacter">
-                    <img src={require('../../../images/character1.png')} className="character1"/>
-                    <img src={require('../../../images/character2.png')} className="character2"/>
+                    <img src={require('../../images/character1.png')} className="character1"/>
+                    <img src={require('../../images/character2.png')} className="character2"/>
                 </div>
 
 
