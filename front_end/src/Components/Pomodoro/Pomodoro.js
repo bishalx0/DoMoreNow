@@ -10,7 +10,7 @@ import "./PomoComponents/pomodoro.css";
 
 const Pomodoro = () => {
   const [showSettings, setShowSettings] = useState(false);
-  const [workMinutes, setWorkMinutes] = useState(45);
+  const [FocusTimeMinutes, setFocusTimeMinutes] = useState(45);
   const [breakMinutes, setBreakMinutes] = useState(15);
 
   return (
@@ -20,9 +20,9 @@ const Pomodoro = () => {
           value={{
             showSettings,
             setShowSettings,
-            workMinutes,
+            FocusTimeMinutes,
             breakMinutes,
-            setWorkMinutes,
+            setFocusTimeMinutes,
             setBreakMinutes,
           }}
         >

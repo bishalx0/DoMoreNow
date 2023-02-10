@@ -9,13 +9,13 @@ function Settings() {
   const settingsInfo = useContext(SettingsContext);
   return(
     <div style={{textAlign:'left'}}>
-      <label>work: {settingsInfo.workMinutes}:00</label>
+      <label>FocusTime: {settingsInfo.FocusTimeMinutes}:00</label>
       <ReactSlider
         className={'slider'}
         thumbClassName={'thumb'}
         trackClassName={'track'}
-        value={settingsInfo.workMinutes}
-        onChange={newValue => settingsInfo.setWorkMinutes(newValue)}
+        value={settingsInfo.FocusTimeMinutes}
+        onChange={newValue => settingsInfo.setFocusTimeMinutes(newValue)}
         min={1}
         max={120}
       />

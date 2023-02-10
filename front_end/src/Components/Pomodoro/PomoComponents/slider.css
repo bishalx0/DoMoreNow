@@ -1,11 +1,11 @@
 .slider{
     height: 40px;
-    border: 2px solid var(--red);
+    border: 2px solid #84D7EC;
     border-radius: 20px;
 }
 
 .thumb{
-    background-color: var(--red);
+    background-color: #84D7EC;
     cursor:pointer;
     width:40px;
     height: 40px;
@@ -13,8 +13,8 @@
 }
 
 .slider.green{
-    border: 2px solid var(--green);
+    border: 2px solid var(--text-color);
 }
 .slider.green .thumb{
-    background-color: var(--green);
+    background-color: var(--text-color);
 }
