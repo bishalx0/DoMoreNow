@@ -40,11 +40,11 @@ const Todo = () => {
     <div className={classes.todoContainer}>
         {/* todo title */}
         <div className={classes.items}>
-            <input type="text" className={classes.todoTitle} onChange={(el) => updateTodoTitle(el.target.value)} />
+            <input type="text" placeholder="Enter the name of the task" className={classes.todoTitle} onChange={(el) => updateTodoTitle(el.target.value)} />
             {/* todo hour */}
-            <input type="number" min="0" max="23" className={classes.timeCount} onChange={(el) => updateHr(el.target.value)}  /><p className={classes.timeTitle}>Hrs</p>
-            <input type="number" min="0" max="59" className={classes.timeCount} onChange={(el) => updateMin(el.target.value)}  /><p className={classes.timeTitle}>Mins</p>
-            <button onClick={onSendDataClick}>Send Data</button>
+            <input type="number" min="0" max="23" placeholder="0" className={classes.timeCount} onChange={(el) => updateHr(el.target.value)}  /><p className={classes.timeTitle}>Hrs</p>
+            <input type="number" min="0" max="59" placeholder="0" className={classes.timeCount} onChange={(el) => updateMin(el.target.value)}  /><p className={classes.timeTitle}>Mins</p>
+            <button onClick={onSendDataClick} className={classes.addNewTask}><img src=' plus.png' /></button>
         </div>
     </div>
   )
