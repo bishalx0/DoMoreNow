@@ -12,6 +12,10 @@ class Todo(models.Model):
     todoTitle = models.CharField(max_length=200)
     hrs = models.IntegerField()
     mins = models.IntegerField()
+    work_time = models.IntegerField(null=True)
+    break_time = models.IntegerField(null=True)
+    work_cycle = models.IntegerField(null=True)
+
 
     def __str__(self):
-        return self.title
+        return self.todoTitle
