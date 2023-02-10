@@ -1,29 +1,36 @@
 .heroWrapper{
     display:flex;
+    margin: 0 130px;
+    
 }
 .heroCharacter{
     display:flex;
-
 }
 .heroHeading{
     display: flex;
+    font-size: larger;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(132,215,236,0.7399334733893557) 0%, rgba(132,215,236,0.14609593837535018) 42%, rgba(250,254,254,1) 95%);
 }
 .hero{
     padding:25px;
+    background-color: #F8FBFF;
 }
 
 .btn button{
-    font-size: 15px;
+    font-size: 35px;    
+    background-color: #4bd3f5;
     font-weight: 500;
-    padding:7px 15px;
-    border-radius:20px;
+    padding:7px 25px;
+    border-radius:40px;
     transition: 0.3s all ease;
     cursor: pointer;
+    width: auto;
 }
 .btn button:hover{
-    background-color:red;
-    color:#fff;
+    background-color:#1ebfe7;
+    color:black;
 }
