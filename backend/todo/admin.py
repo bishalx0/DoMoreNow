@@ -8,7 +8,7 @@ class TodoAdmin(admin.ModelAdmin):
     """
     List of a TODO to display in admin
     """
-    list_display = ("title", "description", "created",  "completed")
+    list_display = ("todoTitle", "hrs", "mins")
 
 
 admin.site.register(Todo, TodoAdmin)
