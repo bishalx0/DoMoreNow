@@ -1,11 +1,36 @@
-import React from 'react'
+import React from "react";
+import Timer from "./PomoComponents/Timer";
+import Settings from "./PomoComponents/Settings";
+import {useState} from 'react';
+import SettingsContext from "./PomoComponents/SettingsContext";
+import "./PomoComponents/pomodoro.css";
+
+
+
 
 const Pomodoro = () => {
-  return (
-    <div>
-      pomodoro
-    </div>
-  )
-}
+  const [showSettings, setShowSettings] = useState(false);
+  const [workMinutes, setWorkMinutes] = useState(45);
+  const [breakMinutes, setBreakMinutes] = useState(15);
 
-export default Pomodoro
+  return (
+    <div className="pomodoro">
+      <main>
+        <SettingsContext.Provider
+          value={{
+            showSettings,
+            setShowSettings,
+            workMinutes,
+            breakMinutes,
+            setWorkMinutes,
+            setBreakMinutes,
+          }}
+        >
+          {showSettings ? <Settings /> : <Timer />}
+        </SettingsContext.Provider>
+      </main>
+    </div>
+  );
+};
+
+export default Pomodoro;
