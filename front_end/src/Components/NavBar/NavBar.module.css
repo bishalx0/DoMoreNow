@@ -1,0 +1,13 @@
+.navbar{
+    height: 80px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background : linear-gradient(#cc2b5e,#753a88);
+    padding-right: 50px;
+    padding-left: 100px;
+    margin-left: 10%;
+    text-transform: uppercase;
+    font-family: 'Roboto Mono';
+}

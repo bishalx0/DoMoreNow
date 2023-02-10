@@ -4,10 +4,41 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { createRoot } from "react-dom/client";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
+import Todo from './Components/Todo/Todo';
+import Pomodoro from './Components/Pomodoro/Pomodoro';
+import RoutinePlus from './Components/RoutinePlus/RoutinePlus';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement : <h2>Oops</h2>
+  },
+  {
+    path: "/todo",
+    element: <Todo />,
+  },
+  {
+    path: "/pomodoro",
+    element: <Pomodoro />,
+  },
+  {
+    path: "/routineplus",
+    element: <RoutinePlus />,
+  },
+]);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
