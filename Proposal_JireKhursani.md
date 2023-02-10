@@ -1,3 +1,5 @@
+## DoMoreNow
+
 # Introduction 
 DoMoreNow is an productivity enhancing tool which aims to enhance productivity of a person on their studies or in professional carrer. It is more than a average focusing tool but rather we aim to provide a customized platform for a person to do more in the time they have. DoMoreNow is for people who want to gain further insight into how they are using their time, achieve more in a day and visualize their progress all while boosting their productivity.
 
