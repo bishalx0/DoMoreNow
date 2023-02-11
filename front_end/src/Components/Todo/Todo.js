@@ -70,11 +70,11 @@ const Todo = () => {
             <input type="number" min="0" max="59" placeholder="0" className={classes.timeCount} onChange={(el) => updateMin(el.target.value)}  /><p className={classes.timeTitle}>Mins</p>
             <button onClick={onSendDataClick} className={classes.addNewTask}><img src={require('./plus.png')} className={classes.plusImage}/></button>
         </div>
+        <div className={classes.todoItems}>
         {
             todoCollection.map((todo) => {
                 return(
-                    <div className={classes.todoItems}>
-                        <div className={classes.todoItem}>
+                        <div className={classes.todoItem} key={todo.id}>
                             {/* mark as done input */}
                             {/* <input type="checkbox" className={classes.markDone} /> */}
                             {/* todo title name */}
@@ -99,37 +99,9 @@ const Todo = () => {
                             {/* delete todo item */}
                             <p className={classes.deleteLink}>Delete</p>
                         </div>
-                    </div>
                 );
             })
         }
-        <div className={classes.todoItems}>
-            <div className={classes.todoItem}>
-                {/* mark as done input */}
-                {/* <input type="checkbox" className={classes.markDone} /> */}
-                {/* todo title name */}
-                <h3 className={classes.todoItemTitle}>This is my todo</h3>
-                {/* focus timer set */}
-                <div className={classes.focusTimeBox}>
-                    <p>Focus:</p>
-                    <input type="number" className={classes.focusTimeSet} min="20" max="45" />
-                    <p>Mins</p>
-                </div>
-                {/* break timer set */}
-                <div className={classes.breakTimeBox}>
-                    <p>Break:</p>
-                    <input type="number" className={classes.breakTimeSet} min="5" max="15" />
-                    <p>Mins</p>
-                </div>
-                {/* start pomodoro */}
-                <img src={require('../../images/play-buttton.png')} className={classes.todoStart} />
-                {/* <img onClick={() => updateButtonOnTodo("play")} src={require('../../images/pause.png')} className={classes.todoStart} /> */}
-                {/* edit todo */}
-                <p className={classes.editLink}>Edit</p>
-                {/* delete todo item */}
-                <p className={classes.deleteLink}>Delete</p>
-            </div>
-
         </div>
     </div>
   )
