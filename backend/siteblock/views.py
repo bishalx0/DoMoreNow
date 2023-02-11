@@ -40,7 +40,7 @@ class SiteView(APIView):
     def post(self, request, format=None):
         serializer = SiteSerializer(data=request.data)
         if serializer.is_valid():
-            print("serializer", serializer)
+            # print("serializer", serializer)
             serializer.save()
             return Response({'success': True})
         else:
