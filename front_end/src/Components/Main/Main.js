@@ -9,7 +9,12 @@ import RoutinePlus from '../RoutinePlus/RoutinePlus';
 
 const Main = () => {
     const [itemClicked,updateItemClicked] = useState("todo");
-    let component = <Todo />
+    let component = <div className="pomodoroCollection">
+    <Pomodoro />
+    {/* Task Title */}
+    <h2 className={classes.taskTitle}>Task Name</h2>
+    <Todo />
+</div>
     switch(itemClicked){
         case 'dashboard':
             component = <Dashboard />

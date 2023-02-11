@@ -104,10 +104,10 @@ const SiteDisabler = () => {
             const response = await fetch('http://127.0.0.1:8000/blocksite/sites/',{
             method : 'POST',
             body : JSON.stringify({
-                entertainment : entertainmentSites,
-                social : socialmediaSites,
-                news : nepalnewsSites,
-                sports : sportssites
+                entertainment : entertainmentSites.toString(),
+                social : socialmediaSites.toString(),
+                news : nepalnewsSites.toString(),
+                sports : sportssites.toString()
             }),
             headers : {
                 "Content-type" : "application/json",
