@@ -14,7 +14,7 @@ const App = () => {
         <div className={classes.logoContainer}>
           <img src={require('./images/logo.jpg')} className={classes.logo}/>
         </div>
-        <NavBar />
+        {/* <NavBar /> */}
         
       </div>
     

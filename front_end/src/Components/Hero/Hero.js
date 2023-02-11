@@ -1,5 +1,6 @@
 import React from 'react'
 import "./hero.css";
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (  
@@ -12,7 +13,7 @@ const Hero = () => {
                       <p> DoMoreNow is an automated distraction eliminator that enables you to take control over your priorities once again. With DoMoreNow, you can finally be free to pursue your goals distraction-free.</p>
                     </div>
                     <div className="btn">
-                      <button src="#">Focus Now</button>
+                      <button><Link to="/main" style={{color:"#fff",textDecoration:'none'}}>Focus Now</Link></button>
                     </div>
                 </div>
                 <div className="heroCharacter">

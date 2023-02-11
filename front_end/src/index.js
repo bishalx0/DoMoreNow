@@ -14,6 +14,8 @@ import {
 import Todo from './Components/Todo/Todo';
 import Pomodoro from './Components/Pomodoro/Pomodoro';
 import RoutinePlus from './Components/RoutinePlus/RoutinePlus';
+import Main from './Components/Main/Main';
+import Dashboard from './Components/Dashboard/Dashboard';
 
 const router = createBrowserRouter([
   {
@@ -21,18 +23,26 @@ const router = createBrowserRouter([
     element: <App />,
     errorElement : <h2>Oops</h2>
   },
+  // {
+  //   path: "/todo",
+  //   element: <Todo />,
+  // },
+  // {
+  //   path: "/pomodoro",
+  //   element: <Pomodoro />,
+  // },
+  // {
+  //   path: "/routineplus",
+  //   element: <RoutinePlus />,
+  // },
   {
-    path: "/todo",
-    element: <Todo />,
+    path : '/main',
+    element : <Main />
   },
-  {
-    path: "/pomodoro",
-    element: <Pomodoro />,
-  },
-  {
-    path: "/routineplus",
-    element: <RoutinePlus />,
-  },
+  // {
+  //   path : '/dashboard',
+  //   element : <Dashboard />
+  // }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

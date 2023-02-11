@@ -1,0 +1,21 @@
+.main{
+    height: 100vh;
+    width: 100vw;
+    display : flex;
+}
+
+.verticalNavbar{
+    height: 100%;
+    width : 20%;
+    background-color: #84D7EC;
+    text-align: center;
+}
+
+.verticalNavbarItems{
+    border-bottom : 1px solid #fff;
+}
+
+.verticalComponents{
+    height: 100%;
+    width: 80%;
+}
