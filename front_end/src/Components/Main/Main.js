@@ -57,9 +57,6 @@ const Main = () => {
             <div className={classes.verticalComponents}>
                 {component}
             </div>
-            
-  
-
       </div>
 
     </>
