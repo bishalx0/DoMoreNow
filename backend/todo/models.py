@@ -1,5 +1,4 @@
-from datetime import timezone
-
+from datetime import datetime
 from django.db import models
 
 # Create your models here.
@@ -14,7 +13,12 @@ class Todo(models.Model):
     mins = models.IntegerField()
     work_time = models.IntegerField(null=True)
     break_time = models.IntegerField(null=True)
-    work_cycle = models.IntegerField(null=True)
+    work_cycle_frontend = models.IntegerField(default=0)
+    work_cycle_backend = models.IntegerField(null=True)
+    pause = models.JSONField(null=True)
+    completed = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 
     def __str__(self):
