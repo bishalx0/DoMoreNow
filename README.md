@@ -19,4 +19,16 @@ for more information you can visit into our proposal.
 <img alt="DJ REST API" src="https://www.django-rest-framework.org/img/logo.png" height="100px">
 <img alt="sqlite" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/SQLite370.svg/2560px-SQLite370.svg.png" height="100px">
 
+## INSTALLATION
+1. Clone te repository into your machine
+2. Make sure you have npm and python install
+3. Run backend
+   1. Create a python virtual environment
+   2. activate it
+   3. install all the packages of requirements.txt using pip
+   4. run backend django server
+4. Run frontend
+   1. Install all the dependencies using npm install
+   2. run frontend server using npm start
+5. Now you are done!
 
