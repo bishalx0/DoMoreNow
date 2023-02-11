@@ -23,3 +23,8 @@ class Todo(models.Model):
 
     def __str__(self):
         return self.todoTitle
+
+
+class Pause(models.Model):
+    task_id = models.IntegerField()
+    pause_count = models.IntegerField(default=0)

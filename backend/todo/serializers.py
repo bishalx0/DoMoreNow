@@ -1,5 +1,11 @@
 from rest_framework import serializers
-from .models import Todo
+from .models import Todo, Pause
+
+
+class PauseSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Pause
+        fields = ("task_id", "pause_count")
 
 
 class TodoSerializer(serializers.ModelSerializer):
