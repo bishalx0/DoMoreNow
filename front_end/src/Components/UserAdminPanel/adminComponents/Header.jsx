@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className="header flex justify-between px-5 text-lg">
         <div className="logo bg-red-700 text-xl py-5 justify-start">
-            <h1 className="logoTitle">Admin Dashboard</h1>
+            <h1 className="logoTitle">User statistics</h1>
         </div>
         {/*<div className="justify-end">
             <ul>
