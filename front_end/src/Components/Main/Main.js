@@ -41,6 +41,7 @@ const Main = () => {
         console.log(itemClicked);
     })
     return (
+      <>
         <div className={classes.main}>
             {/* side navbar vertical */}
             <div className={classes.verticalNavbar}>
@@ -57,10 +58,10 @@ const Main = () => {
                 {component}
             </div>
             
-        </div>
-        <div className={classes.verticalComponents}>{component}</div>
+  
+
       </div>
-      <div className={classes.verticalComponents}>{component}</div>
+
     </>
   );
 };
