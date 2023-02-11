@@ -39,7 +39,7 @@ const Main = () => {
         <div className={classes.main}>
             {/* side navbar vertical */}
             <div className={classes.verticalNavbar}>
-                <div className={classes.verticalNavbarItems}><NavBarItem item="Dashboard" onClick={() => {updateItemClicked('dashboard')}} /></div>
+                <div className={classes.verticalNavbarItems}><NavBarItem item="Statistics" onClick={() => {updateItemClicked('dashboard')}} /></div>
                 <div className={classes.verticalNavbarItems}><NavBarItem item="Site Disabler" onClick={() => updateItemClicked('disabler')} /></div>
                 {/* <div className={classes.verticalNavbarItems}><NavBarItem item="Todo" onClick={() => updateItemClicked('todo')} /></div> */}
                 <div className={classes.verticalNavbarItems}><NavBarItem item="Pomodoro" onClick={() => updateItemClicked('pomodoro')}/></div>
