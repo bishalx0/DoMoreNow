@@ -1,4 +1,6 @@
+import { border } from "@mui/system";
 import React from "react";
+import Button from "@restart/ui/esm/Button";
 
 // import "./hero.css";
 import { Link } from "react-router-dom";
@@ -14,13 +16,17 @@ const Hero = () => {
               Distractive Environment
             </h3>
             <p className="mt-20">
-              {" "}
-              DoMoreNow is an automated distraction eliminator that enables you
-              to take control over your priorities once again. With DoMoreNow,
-              you can finally be free to pursue your goals distraction-free.
+              Eliminate your distraction with DoMoreNow and take control over
+              your priorities
+              <br />
+              <div className="border inline bg-primary rounded text-base" >
+              <Button variant="contained">
+              <Link to="/main">Focus Now</Link>
+            </Button>
+              </div>
             </p>
           </div>
-          <div className="heroCharacter flex w-50 relative -ml-10">
+          <div className="heroCharacter flex w-50 relative ml-10">
             <img
               src={require("../../images/character1.png")}
               className="character1"
@@ -30,16 +36,6 @@ const Hero = () => {
               className="character2"
             />
           </div>
-          <button className="z-50">
-          <div className="btn font-semibold bg-black text-white  h-10 w-32 bottom-0 justify-start">
-          <div className="rounded-lg  h-16">
-            <Link to="/main" className="text-base ">
-              Focus Now
-            </Link>
-          </div>
-        </div>
-        </button>
-
         </div>
       </div>
     </div>

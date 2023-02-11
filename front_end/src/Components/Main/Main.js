@@ -50,18 +50,11 @@ const Main = () => {
                 {/* <div className={classes.verticalNavbarItems}><NavBarItem item="Todo" onClick={() => updateItemClicked('todo')} /></div> */}
                 <div className={classes.verticalNavbarItems}><NavBarItem item="Pomodoro" onClick={() => updateItemClicked('pomodoro')}/></div>
                 <div className={classes.verticalNavbarItems}><NavBarItem item="Routine+" onClick={() => updateItemClicked('routineplus')} /></div>
-            
-            
-            
             </div>
             <div className={classes.verticalComponents}>
                 {component}
             </div>
-            
-  
-
       </div>
-
     </>
   );
 };
