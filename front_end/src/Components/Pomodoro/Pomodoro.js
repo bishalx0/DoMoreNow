@@ -4,6 +4,7 @@ import Settings from "./PomoComponents/Settings";
 import {useState} from 'react';
 import SettingsContext from "./PomoComponents/SettingsContext";
 import "./PomoComponents/pomodoro.css";
+import Todo from "../Todo/Todo";
 
 
 
@@ -22,11 +23,11 @@ const Pomodoro = () => {
             setShowSettings,
             FocusTimeMinutes,
             breakMinutes,
-            setFocusTimeMinutes,
-            setBreakMinutes,
+            // setFocusTimeMinutes,
+            // setBreakMinutes,
           }}
         >
-          {showSettings ? <Settings /> : <Timer />}
+          { showSettings ? <Settings /> : <Timer />}
         </SettingsContext.Provider>
       </main>
     </div>

@@ -12,7 +12,7 @@ const App = () => {
      
     <div className={classes.navbarContainer}>
         <div className={classes.logoContainer}>
-          <img src={require('./images/logo.jpg')} className={classes.logo}/>
+          <img src={require('./images/logo-transparent.png')} className={classes.logo}/>
         </div>
         {/* <NavBar /> */}
         

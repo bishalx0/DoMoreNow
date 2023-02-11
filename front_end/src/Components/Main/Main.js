@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import classes from './Main.module.css'
-import NavBarItem from '../NavBarItem/NavBarItem';
-import Todo from '../Todo/Todo';
-import Dashboard from '../Dashboard/Dashboard';
-import SiteDisabler from '../SiteDisabler/SiteDisabler';
-import Pomodoro from '../Pomodoro/Pomodoro';
-import RoutinePlus from '../RoutinePlus/RoutinePlus';
+import React, { useEffect, useState } from "react";
+import classes from "./Main.module.css";
+import NavBarItem from "../NavBarItem/NavBarItem";
+import Todo from "../Todo/Todo";
+import Dashboard from "../Dashboard/Dashboard";
+import SiteDisabler from "../SiteDisabler/SiteDisabler";
+import Pomodoro from "../Pomodoro/Pomodoro";
+import RoutinePlus from "../RoutinePlus/RoutinePlus";
 
 const Main = () => {
     const [itemClicked,updateItemClicked] = useState("todo");
@@ -58,7 +58,11 @@ const Main = () => {
             </div>
             
         </div>
-    )
-}
+        <div className={classes.verticalComponents}>{component}</div>
+      </div>
+      <div className={classes.verticalComponents}>{component}</div>
+    </>
+  );
+};
 
 export default Main;

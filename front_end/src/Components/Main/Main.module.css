@@ -12,8 +12,20 @@
 }
 
 .verticalNavbarItems{
+
     border-bottom : 1px solid #fff;
+    font-size:1.5rem;
+    display: flex;
+    justify-content: start;
+    padding: 10px 50px;
+    font-weight: 500;
+    transition: 0.3s all ease-in-out;
 }
+/* .verticalNavbarItems:hover{
+    background-color: #d6cfcf;
+    color:black !important;
+} */
+
 
 .verticalComponents{
     height: 100%;
@@ -23,3 +35,9 @@
 .taskTitle{
     text-align: center;
 }
+.logo{
+    height:100px;
+    width:200px;
+
+}
+

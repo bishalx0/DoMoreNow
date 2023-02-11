@@ -4,7 +4,6 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-<<<<<<< HEAD
     fontSize: {
       sm: '0.8rem',
       base: '1rem',
@@ -15,8 +14,6 @@ module.exports = {
       '5xl': '3.052rem',
       '8xl': '4rem'
     },
-=======
->>>>>>> 6b8a87a (added the required modules and userAdminDashboard components)
     container: {
       padding: {
         DEFAULT: '1rem',
