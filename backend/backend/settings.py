@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "rest_framework",  # rest framework
     "todo",  # todo api
+    "siteblock",
 ]
 
 MIDDLEWARE = [
