@@ -1,4 +1,31 @@
 .siteDisablerContainer{
-    border: 5px solid red;
     height: 100%;
+}
+
+
+.disableItems{
+    width : 60%;
+    margin : 10px 20%;
+}
+
+.disableItem{
+    display: flex;
+    align-items: center;
+    border: 2px solid green;
+    margin: 10px 0px;
+}
+
+.disableItemTitle{
+    width : 90%;
+    padding-left: 15px;
+}
+
+
+
+.deleteLink{
+    width: 10%;
+    text-decoration: underline;
+    color: red;
+    cursor: pointer;
+
 }

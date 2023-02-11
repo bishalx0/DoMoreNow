@@ -8,6 +8,7 @@ const Todo = () => {
 
     const [todoCollection,updateTodoCollection] = useState([]);
 
+
     useEffect(() => {
         console.log(todoTitle,hr,min);
     })
@@ -26,7 +27,9 @@ const Todo = () => {
             },
             })
             const data = await response.json();
-            console.log("data is during post method : " , data);
+            let currentTodoCollection = todoCollection;
+            currentTodoCollection.push(data);
+            updateTodoCollection(currentTodoCollection);
         }catch(error){
             console.log(error);
         }
@@ -39,23 +42,23 @@ const Todo = () => {
         }
     }
 
-    const getData = async () => {
-        try{
-            const response = await fetch('http://127.0.0.1:8000/todoapi/todos/',{
-            method : 'GET',
-            })
-            const data = await response.json();
-            let currentTodoCollection = todoCollection;
-            currentTodoCollection.push(data);
-            updateTodoCollection(currentTodoCollection);
-        }catch(error){
-            console.log(error);
-        }
-    }
+    // const getData = async () => {
+    //     try{
+    //         const response = await fetch('http://127.0.0.1:8000/todoapi/todos/',{
+    //         method : 'GET',
+    //         })
+    //         const data = await response.json();
+    //         let currentTodoCollection = todoCollection;
+    //         currentTodoCollection.push(data);
+    //         updateTodoCollection(currentTodoCollection);
+    //     }catch(error){
+    //         console.log(error);
+    //     }
+    // }
 
-    const onGetDataClick = () => {
-        getData();
-    }
+    // const onGetDataClick = () => {
+    //     getData();
+    // }
 
   return (
     <div className={classes.todoContainer}>
@@ -66,6 +69,67 @@ const Todo = () => {
             <input type="number" min="0" max="23" placeholder="0" className={classes.timeCount} onChange={(el) => updateHr(el.target.value)}  /><p className={classes.timeTitle}>Hrs</p>
             <input type="number" min="0" max="59" placeholder="0" className={classes.timeCount} onChange={(el) => updateMin(el.target.value)}  /><p className={classes.timeTitle}>Mins</p>
             <button onClick={onSendDataClick} className={classes.addNewTask}><img src={require('./plus.png')} className={classes.plusImage}/></button>
+        </div>
+        {
+            todoCollection.map((todo) => {
+                return(
+                    <div className={classes.todoItems}>
+                        <div className={classes.todoItem}>
+                            {/* mark as done input */}
+                            {/* <input type="checkbox" className={classes.markDone} /> */}
+                            {/* todo title name */}
+                            <h3 className={classes.todoItemTitle}>{todo.todoTitle}</h3>
+                            {/* focus timer set */}
+                            <div className={classes.focusTimeBox}>
+                                <p style={{marginRight:'5px'}}>Focus:</p>
+                                <input type="number" className={classes.focusTimeSet} min="20" max="45" />
+                                <p>Mins</p>
+                            </div>
+                            {/* break timer set */}
+                            <div className={classes.breakTimeBox}>
+                                <p style={{marginRight:'5px'}}>Break:</p>
+                                <input type="number" className={classes.breakTimeSet} min="5" max="15" />
+                                <p>Mins</p>
+                            </div>
+                            {/* start pomodoro */}
+                            <img src={require('../../images/play-buttton.png')} className={classes.todoStart} />
+                            {/* <img onClick={() => updateButtonOnTodo("play")} src={require('../../images/pause.png')} className={classes.todoStart} /> */}
+                            {/* edit todo */}
+                            <p className={classes.editLink}>Edit</p>
+                            {/* delete todo item */}
+                            <p className={classes.deleteLink}>Delete</p>
+                        </div>
+                    </div>
+                );
+            })
+        }
+        <div className={classes.todoItems}>
+            <div className={classes.todoItem}>
+                {/* mark as done input */}
+                {/* <input type="checkbox" className={classes.markDone} /> */}
+                {/* todo title name */}
+                <h3 className={classes.todoItemTitle}>This is my todo</h3>
+                {/* focus timer set */}
+                <div className={classes.focusTimeBox}>
+                    <p>Focus:</p>
+                    <input type="number" className={classes.focusTimeSet} min="20" max="45" />
+                    <p>Mins</p>
+                </div>
+                {/* break timer set */}
+                <div className={classes.breakTimeBox}>
+                    <p>Break:</p>
+                    <input type="number" className={classes.breakTimeSet} min="5" max="15" />
+                    <p>Mins</p>
+                </div>
+                {/* start pomodoro */}
+                <img src={require('../../images/play-buttton.png')} className={classes.todoStart} />
+                {/* <img onClick={() => updateButtonOnTodo("play")} src={require('../../images/pause.png')} className={classes.todoStart} /> */}
+                {/* edit todo */}
+                <p className={classes.editLink}>Edit</p>
+                {/* delete todo item */}
+                <p className={classes.deleteLink}>Delete</p>
+            </div>
+
         </div>
     </div>
   )

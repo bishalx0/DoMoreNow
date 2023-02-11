@@ -3,9 +3,11 @@
     padding: 10px;
     overflow: hidden;
     /* background: red; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    width : 80%;
+    margin: 0 10%;
 } 
 
 .items{
@@ -31,6 +33,7 @@
     border-radius: 10px;
     border: 2px solid black;
     font-size: 20px;
+    text-align: center;
 }
 
 .timeTitle{
@@ -53,4 +56,64 @@
 .plusImage{
     height: 30px;
     width: 30px;
+}
+
+/* .items{
+    border: 2px solid red;
+} */
+
+/* .todoItems{
+    border: 2px solid green;
+    margin: 5px 0px;
+}  */
+
+.todoItem{
+    display: flex;
+    align-items: center;
+    border: 2px solid green;
+    margin: 10px 0px;
+}
+
+.markDone{
+    width: 5%;
+    height: 20px;
+    cursor: pointer;
+}
+
+.todoItemTitle{
+    width : 55%;
+    padding-left: 15px;
+}
+
+.focusTimeBox , .breakTimeBox{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.focusTimeSet , .breakTimeSet{
+    height: 15px;
+}
+
+.todoStart{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.editLink{
+    width : 5%;
+    text-decoration: underline;
+    color: green;
+    cursor: pointer;
+}
+
+.deleteLink{
+    width: 5%;
+    text-decoration: underline;
+    color: red;
+    cursor: pointer;
+
 }
