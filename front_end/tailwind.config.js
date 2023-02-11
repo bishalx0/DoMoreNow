@@ -43,12 +43,9 @@ module.exports = {
       'gray-light': '#d3dce6',
       'white': '#ffffff',
       'black': '#00000',
-<<<<<<< HEAD
       'primary' : '#84D7EC',
       'secondary' : '#F8FBFF',
       'black': '#000000'
-=======
->>>>>>> 6b8a87a (added the required modules and userAdminDashboard components)
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
