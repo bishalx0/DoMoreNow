@@ -112,9 +112,13 @@ const SiteDisabler = () => {
             headers : {
                 "Content-type" : "application/json",
             },
+            
             })
             const data = await response.json();
             console.log("site to remove is : " , data);
+            /*
+                updateEntertainment
+            */
         }catch(error){
             console.log(error);
         }

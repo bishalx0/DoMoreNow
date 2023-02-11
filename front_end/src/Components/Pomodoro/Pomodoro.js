@@ -10,8 +10,8 @@ import "./PomoComponents/pomodoro.css";
 
 const Pomodoro = () => {
   const [showSettings, setShowSettings] = useState(false);
-  const [FocusTimeMinutes, setFocusTimeMinutes] = useState(45);
-  const [breakMinutes, setBreakMinutes] = useState(15);
+  const [FocusTimeMinutes, setFocusTimeMinutes] = useState(0);
+  const [breakMinutes, setBreakMinutes] = useState(0);
 
   return (
     <div className="pomodoro">
