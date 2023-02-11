@@ -97,7 +97,7 @@ const SiteDisabler = () => {
 
     useEffect(() => {
         sendSiteName();
-    })
+    },[])
 
     const sendSiteName = async () => {
         try{

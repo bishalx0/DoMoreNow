@@ -94,6 +94,7 @@
 
 .focusTimeSet , .breakTimeSet{
     height: 15px;
+    border: 1px solid #84D7EC;
 }
 
 .todoStart{
