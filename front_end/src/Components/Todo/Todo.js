@@ -8,9 +8,22 @@ const Todo = () => {
 
     const [todoCollection,updateTodoCollection] = useState([]);
 
+    const getAllDataInitially = async () => {
+        try{
+            const response = await fetch('http://127.0.0.1:8000/todoapi/todos/',{
+            method : 'GET',
+            })
+            const data = await response.json();
+            updateTodoTitle(data);
+        }catch(error){
+            console.log(error);
+        }
+    }
+
 
     useEffect(() => {
-        console.log(todoTitle,hr,min);
+        // console.log(todoTitle,hr,min);
+        getAllDataInitially();
     })
 
     const sendData = async () => {
@@ -26,10 +39,10 @@ const Todo = () => {
                 "Content-type" : "application/json",
             },
             })
-            const data = await response.json();
-            let currentTodoCollection = todoCollection;
-            currentTodoCollection.push(data);
-            updateTodoCollection(currentTodoCollection);
+            // const data = await response.json();
+            // let currentTodoCollection = todoCollection;
+            // currentTodoCollection.push(data);
+            // updateTodoCollection(currentTodoCollection);
         }catch(error){
             console.log(error);
         }

@@ -1,5 +1,6 @@
 .siteDisablerContainer{
     height: 100%;
+    overflow-y: scroll;
 }
 
 
@@ -11,12 +12,11 @@
 .disableItem{
     display: flex;
     align-items: center;
-    border: 2px solid green;
     margin: 10px 0px;
 }
 
 .disableItemTitle{
-    width : 90%;
+    width : 80%;
     padding-left: 15px;
 }
 
@@ -28,4 +28,26 @@
     color: red;
     cursor: pointer;
 
+}
+
+.entertainmentSites , .sportsSites{
+    height: 300px;
+    border: 1px solid #e67e22;
+    overflow: scroll;
+    background-color: #ddd;
+    margin : 20px 0;
+}
+
+.sitescheckbox{
+    width: 10%;
+    height : 20px;
+}
+
+
+.siteTitleHeading{
+    text-align: center;
+}
+
+.sportsSites{
+    margin-bottom: 50px;
 }
