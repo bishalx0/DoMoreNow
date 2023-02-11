@@ -1,6 +1,6 @@
-import { border } from "@mui/system";
+
 import React from "react";
-import Button from "@restart/ui/esm/Button";
+
 
 // import "./hero.css";
 import { Link } from "react-router-dom";
@@ -20,9 +20,9 @@ const Hero = () => {
               your priorities
               <br />
               <div className="border inline bg-primary rounded text-base" >
-              <Button variant="contained">
+              <button>
               <Link to="/main">Focus Now</Link>
-            </Button>
+            </button>
               </div>
             </p>
           </div>

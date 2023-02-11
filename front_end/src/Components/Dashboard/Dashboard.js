@@ -5,7 +5,7 @@ import classes from './Dashboard.module.css';
 const Dashboard = () => {
     return (
         <div className={classes.dashboardContainer}>
-            <div className="lg:container md:container sm:container px-5">
+            <div className=" px-5">
                 <UserAdmin />
             </div>
         </div>
