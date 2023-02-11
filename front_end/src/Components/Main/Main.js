@@ -6,6 +6,11 @@ import Dashboard from "../Dashboard/Dashboard";
 import SiteDisabler from "../SiteDisabler/SiteDisabler";
 import Pomodoro from "../Pomodoro/Pomodoro";
 import RoutinePlus from "../RoutinePlus/RoutinePlus";
+import AddTaskIcon from '@mui/icons-material/AddTask';
+import StackedLineChartIcon from '@mui/icons-material/StackedLineChart';
+import PublicOffIcon from '@mui/icons-material/PublicOff';
+import PendingActionsIcon from '@mui/icons-material/PendingActions';
+import Image from "rc-image";
 
 const Main = () => {
     const [itemClicked,updateItemClicked] = useState("todo");
@@ -42,17 +47,18 @@ const Main = () => {
     })
     return (
       <>
+        <div className="userDashboardHeader lg:container">
+            <img src={require('../../images/logo-transparent.png')} alt="WeDoMore" className="logo" style={{height:'90px',width:'90px',borderBottom:'1px solid #d0caca',paddingBottom:'10px'}}/>
+
+        </div>
         <div className={classes.main}>
             {/* side navbar vertical */}
             <div className={classes.verticalNavbar}>
-                <div className={classes.verticalNavbarItems}><NavBarItem item="Statistics" onClick={() => {updateItemClicked('dashboard')}} /></div>
-                <div className={classes.verticalNavbarItems}><NavBarItem item="Site Disabler" onClick={() => updateItemClicked('disabler')} /></div>
-                {/* <div className={classes.verticalNavbarItems}><NavBarItem item="Todo" onClick={() => updateItemClicked('todo')} /></div> */}
-                <div className={classes.verticalNavbarItems}><NavBarItem item="Pomodoro" onClick={() => updateItemClicked('pomodoro')}/></div>
-                <div className={classes.verticalNavbarItems}><NavBarItem item="Routine+" onClick={() => updateItemClicked('routineplus')} /></div>
-            
-            
-            
+                <div className={classes.verticalNavbarItems}><StackedLineChartIcon className="navIcon" style={{fontSize:'2rem',marginRight:'20px'}}/><NavBarItem item="Statistics" onClick={() => {updateItemClicked('dashboard')}} /></div>
+                <div className={classes.verticalNavbarItems}><PublicOffIcon className="navIcon" style={{fontSize:'2rem',marginRight:'20px'}} /><NavBarItem item="Site Disabler" onClick={() => updateItemClicked('disabler')} /></div>
+                {/* <div className={classes.verticalNavbarItems}><AddTaskIcon className="navIcon" style={{fontSize:'2rem',marginRight:'20px'}} /><NavBarItem item="Todo" onClick={() => updateItemClicked('todo')} /></div> */}
+                <div className={classes.verticalNavbarItems}><PendingActionsIcon className="navIcon" style={{fontSize:'2rem',marginRight:'20px'}} /><NavBarItem item="Pomodoro" onClick={() => updateItemClicked('pomodoro')}/></div>
+                <div className={classes.verticalNavbarItems}><AddTaskIcon className="navIcon" style={{fontSize:'2rem',marginRight:'20px'}} /><NavBarItem item="Routine+" onClick={() => updateItemClicked('routineplus')} /></div>
             </div>
             <div className={classes.verticalComponents}>
                 {component}

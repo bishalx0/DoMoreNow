@@ -56,6 +56,7 @@ module.exports = {
       borderRadius: {
         '4xl': '2rem',
       },
+      tableLayout: ['hover', 'focus'],
   plugins: [
   ],
 }
