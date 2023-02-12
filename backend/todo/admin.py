@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Todo, Pause
+from .models import Todo, Pause,Subject
 
 # Register your models here.
 
@@ -15,5 +15,10 @@ class PauseAdmin(admin.ModelAdmin):
     list_display = ("id", "task_id", "pause_count")
 
 
+class SubjectAdmin(admin.ModelAdmin):
+    list_display = ("id", "name", "credit")
+
+
 admin.site.register(Todo, TodoAdmin)
 admin.site.register(Pause, PauseAdmin)
+admin.site.register(Subject, SubjectAdmin)

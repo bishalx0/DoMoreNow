@@ -1,6 +1,11 @@
 from rest_framework import serializers
-from .models import Todo, Pause
+from .models import Todo, Pause, Subject
 
+
+class SubjectSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Subject
+        fields = ("name", "credit");
 
 class PauseSerializer(serializers.ModelSerializer):
     class Meta:

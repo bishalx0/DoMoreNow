@@ -1,16 +1,37 @@
 import datetime
 
 from rest_framework import viewsets
-from .serializers import TodoSerializer, PauseSerializer
+from .serializers import TodoSerializer, PauseSerializer, SubjectSerializer
 from rest_framework import generics
-from .models import Todo, Pause
+from .models import Todo, Pause, Subject
 from rest_framework.response import Response
 import math
 from rest_framework.decorators import api_view
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 
-# Create your views here.
+
+@api_view(['GET', 'POST'])
+def subject_view(request):
+    if request.method == 'GET':
+        subjects = Subject.objects.all()
+        serializer = SubjectSerializer(subjects, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        name = request.data.get('name')
+        credit = request.data.get('credit')
+
+        if not name or not credit:
+            return Response({'error': 'Missing name or credit parameter'}, status=400)
+
+        subject = Subject(name=name, credit=int(credit))
+        subject.save()
+        serializer = SubjectSerializer(subject)
+        return Response(serializer.data)
+
+    else:
+        return Response({'error': 'Unsupported HTTP method'}, status=405)
 
 
 @api_view(['GET', 'POST'])
@@ -83,7 +104,6 @@ def pause_view(request):
 
 @api_view(['GET'])
 def get_stats(request):
-
     completed_tasks = Todo.objects.filter(completed=True).count()
     total_added_tasks = Todo.objects.all().count()
 

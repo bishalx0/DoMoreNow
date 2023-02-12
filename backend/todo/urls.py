@@ -6,5 +6,6 @@ urlpatterns = [
     path('todos/<int:pk>/', views.TodoDetail.as_view(), name='todo_detail'),
     path("stats/", views.get_stats, name="get_stats"),
     # path("paused/", views.paused_view, name="paused"),
-    path("pause/", views.pause_view, name="pause")
+    path("pause/", views.pause_view, name="pause"),
+    path("subject/", views.subject_view, name="subjects")
 ]

@@ -41,6 +41,13 @@ INSTALLED_APPS = [
     "rest_framework",  # rest framework
     "todo",  # todo api
     "siteblock",
+    # "oauth_app",
+]
+
+# Required libraries
+REQUIRED_LIBRARIES = [
+    'google-auth',
+    'google-auth-oauthlib',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +137,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ORIGIN_WHITELIST = [
      'http://localhost:3000'
 ]
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         'rest_framework.authentication.SessionAuthentication',
+#     ),
+# }
+#
+# AUTH_USER_MODEL = 'oauth_app.CustomUser'
+#
+# # Google OAuth settings
+# GOOGLE_OAUTH_CLIENT_ID = 'your_google_oauth_client_id'
+# GOOGLE_OAUTH_CLIENT_SECRET = 'your_google_oauth_client_secret'
+# GOOGLE_OAUTH_REDIRECT_URI = 'http://localhost:8000/your_app/google-oauth2-redirect/'
+#

@@ -28,3 +28,8 @@ class Todo(models.Model):
 class Pause(models.Model):
     task_id = models.IntegerField()
     pause_count = models.IntegerField(default=0)
+
+
+class Subject(models.Model):
+    name = models.CharField(max_length=200)
+    credit = models.IntegerField()
