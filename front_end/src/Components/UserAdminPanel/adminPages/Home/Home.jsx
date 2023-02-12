@@ -36,24 +36,24 @@ const Home = () => {
         
     // }
 
-    const [data,updateData] = useState({});
+    // const [data,updateData] = useState({});
 
-    useEffect(() => {
-      getData();
-    })
+    // useEffect(() => {
+    //   getData();
+    // })
 
-    const getData = async () => {
-      try{
-        const response = await fetch('http://127.0.0.1:8000/todoapi/todos/',{
-        method : 'GET',
-        })
-        const datas = await response.json();
-        updateData(datas);
-        console.log(datas);
-    }catch(error){
-        console.log(error);
-    }
-    }
+    // const getData = async () => {
+    //   try{
+    //     const response = await fetch('http://127.0.0.1:8000/todoapi/todos/',{
+    //     method : 'GET',
+    //     })
+    //     const datas = await response.json();
+    //     updateData(datas);
+    //     console.log(datas);
+    // }catch(error){
+    //     console.log(error);
+    // }
+    // }
 
 
   return (
@@ -66,10 +66,10 @@ const Home = () => {
       <div className="homeContainer px-5"> 
       <h2 className="text-2xl font-bold">Activities</h2>
         <div className="contentContainer flex justify-between gap-20 pt-10">
-            <DayStreak className="text-xl" number={data.streak}/>
-            <TimeFocus number={`${data.hours}hrs, ${data.minutes}mins`} />
-            <TaskAdded number={data.added_task}/>
-            <TaskCompleteD number={data.completed_task}/>
+            <DayStreak className="text-xl"/>
+            <TimeFocus  />
+            <TaskAdded />
+            <TaskCompleteD />
         </div>
         <div className="report bg-primary pt-10 px-5 mt-10">
         <h1 className="text-2xl font-bold">Usage Statistics</h1>

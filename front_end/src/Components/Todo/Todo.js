@@ -1,4 +1,5 @@
 import React,{useEffect, useState} from 'react';
+import PlayButton from '../Pomodoro/PomoComponents/PlayButton';
 import classes from './Todo.module.css';
 
 const Todo = () => {
@@ -121,21 +122,22 @@ const Todo = () => {
                             <div className={classes.focusTimeBox}>
                                 <p style={{marginRight:'5px'}}>Focus:</p>
                                 <input type="number" className={classes.focusTimeSet} min="20" max="45" />
-                                <p>Mins</p>
+                                {/*<p>Mins</p>*/}
                             </div>
                             {/* break timer set */}
                             <div className={classes.breakTimeBox}>
                                 <p style={{marginRight:'5px'}}>Break:</p>
                                 <input type="number" className={classes.breakTimeSet} min="5" max="15" />
-                                <p>Mins</p>
+                                {/*<p>Mins</p>*/}
                             </div>
                             {/* start pomodoro */}
                             <img src={require('../../images/play-buttton.png')} className={classes.todoStart} />
+                            <PlayButton />
                             {/*<img onClick={() => updateButtonOnTodo("play")} src={require('../../images/pause.png')} className={classes.todoStart} /> *}
                             {/* edit todo */}
-                            <p className={classes.editLink}>Edit</p>
+                            <p className={classes.editLink} style={{display:'none'}}>Edit</p>
                             {/* delete todo item */}
-                            <p className={classes.deleteLink}>Delete</p>
+                            <p className={classes.deleteLink} style={{display:'none'}}>Delete</p>
                         </div>
                 );
             })

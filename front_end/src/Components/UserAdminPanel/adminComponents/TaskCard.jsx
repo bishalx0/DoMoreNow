@@ -12,9 +12,9 @@ const TaskCard = (props) => {
     <div className="">
     <div className="flex justify-center">
     <div className="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
-      <h2 className="text-gray-900 text-xl leading-tight font-medium mb-2">Day streak</h2>
+      <h2 className="text-gray-900 text-xl leading-tight font-medium mb-2">{props.cardData.title}</h2>
       <p className="text-gray-700 text-base mb-4">
-        10
+        {props.cardData.total}
       </p>
       {/*pass the icon here*/}
       <p className="taskIcon"><AddTaskIcon/></p>

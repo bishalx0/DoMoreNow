@@ -1,4 +1,5 @@
 import React from "react";
+import './heros.css';
 
 // import "./hero.css";
 import { Link } from "react-router-dom";
@@ -30,7 +31,7 @@ const Hero = () => {
           </div>
         </div>
         
-        <div className="-mt-44" style={{position:'absolute'}}>
+        <div className="-mt-44 hBtn" style={{position:'absolute'}}>
           <Link to="/main" className="bg-slate-900 outline relative text-white inline p-4 rounded-2xl text-xl font-semibold -mt-10" style={{top:'-40px'}}>Focus Now</Link>
         </div>
       </div>

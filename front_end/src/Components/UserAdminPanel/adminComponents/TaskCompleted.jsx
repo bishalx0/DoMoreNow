@@ -4,7 +4,7 @@ import TaskCard from '../adminComponents/TaskCard'
 const TaskCompleted = () => {
   return (
     <div className="taskCompleted">
-        <TaskCard  cardData={{title:'Task Completed', totle:'10', icon:""}}/>
+        <TaskCard  cardData={{title:'Task Completed', total:'15', icon:""}}/>
     </div>
   )
 }

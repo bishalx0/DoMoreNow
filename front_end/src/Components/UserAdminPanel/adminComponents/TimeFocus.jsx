@@ -5,7 +5,7 @@ import TaskCard from '../adminComponents/TaskCard';
 const TimeFocus = () => {
   return (
     <div className="timefocus">
-    <TaskCard cardData={{title:"Focused Hour", total:'10', icon:"PsychologySharpIcon"}} />
+    <TaskCard cardData={{title:"Focused Hour", total:'7', icon:"PsychologySharpIcon"}} />
         {/*<div className="">
             <h2 className="text-white"> Time Focus </h2>
             <p>Stay away from distraction</p>

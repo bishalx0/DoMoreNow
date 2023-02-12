@@ -46,7 +46,7 @@
 
 .addNewTask{
     height: 40px;
-    width: 0px;
+    width: 40px;
     margin-left: 10px;
     border:2px solid black;
     border-radius: 10px;
