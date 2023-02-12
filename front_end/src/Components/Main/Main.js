@@ -19,7 +19,7 @@ const Main = () => {
     let component = <div className="pomodoroCollection">
     <Pomodoro />
     {/* Task Title */}
-    <h2 className={classes.taskTitle}>Task Name</h2>
+
     <Todo />
 </div>
     switch(itemClicked){
@@ -36,7 +36,7 @@ const Main = () => {
             component = <div className="pomodoroCollection">
                     <Pomodoro />
                     {/* Task Title */}
-                    <h2 className={classes.taskTitle}>Task Name</h2>
+                    
                     <Todo />
                 </div>
             break;

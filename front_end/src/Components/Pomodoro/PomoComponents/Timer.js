@@ -74,7 +74,7 @@ function Timer() {
         pathColor:mode === 'FocusTime' ? red : green,
         tailColor:'#999)',
       })} />
-    <div style={{marginTop:'20px'}}>
+    <div className=""style={{marginTop:'20px'}}>
         {isPaused
           ? <PlayButton onClick={() => { setIsPaused(false); isPausedRef.current = false; }} />
           : <PauseButton onClick={() => { setIsPaused(true); isPausedRef.current = true; }} />}
