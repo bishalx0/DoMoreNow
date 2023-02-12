@@ -4,11 +4,11 @@
 DoMoreNow is an productivity enhancing tool which aims to enhance productivity of a person on their studies or in professional carrer. It is more than a average focusing tool but rather we aim to provide a customized platform for a person to do more in the time they have. DoMoreNow is for people who want to gain further insight into how they are using their time, achieve more in a day and visualize their progress all while boosting their productivity.
 
 # Background
-Being a student/worker isn’t easy with distractions all around us, it isn’t surprising that many of us find it challenging to organize our time or stay focused on our studies and work. As a person who wants to do best in tasks, time management is not only an essential skill to find success in your academics, but it also allows you to make time for other passions, and to take care of yourself and your mental health. So by DoMoreNow we are helping a person one step closer to achieving their goals in carrer growth.
+Being a student/worker isn’t easy with distractions all around us, it isn’t surprising that many of us find it challenging to organize our time or stay focused on our studies and work. As a person who wants to do best in tasks, time management is not only an essential skill to find success in your academics, but it also allows you to make time for other passions, and to take care of yourself and your mental health. So by DoMoreNow we are helping a person one step closer to achieving their goals in carrer growth. We developed this idea via the problem scenario we ourselves in everyday life however later we got to know that this is a serious issues for all the people around us thus it lead to the birth of this project in Apex Ideathon.
 
 # Objectives
 The main objectives of our project are:
-1. Creating a distraction free learning and growth environment for students/professionals
+1. Creating a distraction free learning and growth platform for students/professionals
 2. Continuously inspiring and motivating individual to be one step closer to the goals they are trying to achieve
 3. Tracking a students progress and their productivity
 
