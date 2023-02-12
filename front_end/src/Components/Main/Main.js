@@ -49,9 +49,6 @@ const Main = () => {
     })
     return (
       <>    
-        <div className="">
-            <Logo />
-        </div>
         {/** <div className="userDashboardHeader lg:container" style={{borderBottom:'1px solid #222'}}>
                 <div className="flex text-center">
                 <Logo  className="justify-items-start"/>
@@ -60,6 +57,7 @@ const Main = () => {
         </div>*/}
         
         <div className={classes.main}>
+        
             {/* side navbar vertical */}
             <div className={classes.verticalNavbar}>
                 <div className={classes.verticalNavbarItems}><StackedLineChartIcon className="navIcon" style={{fontSize:'2rem',marginRight:'20px'}}/><NavBarItem item="Statistics" onClick={() => {updateItemClicked('dashboard')}} /></div>
