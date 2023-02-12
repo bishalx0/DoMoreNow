@@ -10,6 +10,7 @@ const Todo = () => {
 
     const [focusTime,updateFocusTime] = useState(0);
     const [breakTime,updateBreakTime] = useState(0);
+    const [buttonOnTodo,updateButtonOnTodo] = useState("play");
 
     const getAllDataInitially = async () => {
         try{
@@ -45,10 +46,10 @@ const Todo = () => {
 
     useEffect(() => {
         // console.log(todoTitle,hr,min);
-        // getAllDataInitially();
+        getAllDataInitially();
         console.log("Focus Time is : ",focusTime);
         console.log("Break Time is : ",breakTime);
-    })
+    },[todoCollection])
 
     const sendData = async () => {
         try{
@@ -108,62 +109,37 @@ const Todo = () => {
             <button onClick={onSendDataClick} className={classes.addNewTask}><img src={require('./plus.png')} className={classes.plusImage}/></button>
         </div>
         <div className={classes.todoItems}>
-        {/* { */}
-            {/* todoCollection.map((todo) => { */}
-                {/* return( */}
-                        {/* <div className={classes.todoItem} key={todo.id}> */}
+        {
+            todoCollection.map((todo) => {
+                return(
+                        <div className={classes.todoItem} key={todo.id}>
                             {/* mark as done input */}
-                            {/* <input type="checkbox" className={classes.markDone} /> */}
+                            <input type="checkbox" className={classes.markDone} />
                             {/* todo title name */}
-                            {/* <h3 className={classes.todoItemTitle}>{todo.todoTitle}</h3> */}
+                            <h3 className={classes.todoItemTitle}>{todo.todoTitle}</h3>
                             {/* focus timer set */}
-                            {/* <div className={classes.focusTimeBox}> */}
-                                {/* <p style={{marginRight:'5px'}}>Focus:</p> */}
-                                {/* <input type="number" className={classes.focusTimeSet} min="20" max="45" /> */}
-                                {/* <p>Mins</p> */}
-                            {/* </div> */}
+                            <div className={classes.focusTimeBox}>
+                                <p style={{marginRight:'5px'}}>Focus:</p>
+                                <input type="number" className={classes.focusTimeSet} min="20" max="45" />
+                                <p>Mins</p>
+                            </div>
                             {/* break timer set */}
-                            {/* <div className={classes.breakTimeBox}> */}
-                                {/* <p style={{marginRight:'5px'}}>Break:</p> */}
-                                {/* <input type="number" className={classes.breakTimeSet} min="5" max="15" /> */}
-                                {/* <p>Mins</p> */}
-                            {/* </div> */}
+                            <div className={classes.breakTimeBox}>
+                                <p style={{marginRight:'5px'}}>Break:</p>
+                                <input type="number" className={classes.breakTimeSet} min="5" max="15" />
+                                <p>Mins</p>
+                            </div>
                             {/* start pomodoro */}
-                            {/* <img src={require('../../images/play-buttton.png')} className={classes.todoStart} /> */}
-                            {/* <img onClick={() => updateButtonOnTodo("play")} src={require('../../images/pause.png')} className={classes.todoStart} /> */}
+                            <img src={require('../../images/play-buttton.png')} className={classes.todoStart} />
+                            {/*<img onClick={() => updateButtonOnTodo("play")} src={require('../../images/pause.png')} className={classes.todoStart} /> *}
                             {/* edit todo */}
-                            {/* <p className={classes.editLink}>Edit</p> */}
+                            <p className={classes.editLink}>Edit</p>
                             {/* delete todo item */}
-                            {/* <p className={classes.deleteLink}>Delete</p> */}
-                        {/* </div> */}
-                {/* ); */}
-            {/* }) */}
-        {/* } */}
-        <div className={classes.todoItem}>
-            {/* mark as done input */}
-            {/* <input type="checkbox" className={classes.markDone} /> */}
-            {/* todo title name */}
-            <h3 className={classes.todoItemTitle}>Namaste</h3>
-            {/* focus timer set */}
-            <div className={classes.focusTimeBox}>
-                <p style={{marginRight:'5px'}}>Focus:</p>
-                <input type="number" className={classes.focusTimeSet} min="20" max="45" placeholder='20' onChange={(el) => updateFocusTime(el.target.value)} />
-                <p>Mins</p>
-            </div>
-            {/* break timer set */}
-            <div className={classes.breakTimeBox}>
-                <p style={{marginRight:'5px'}}>Break:</p>
-                <input type="number" className={classes.breakTimeSet} min="5" max="15" placeholder='5' onChange={(el) => updateBreakTime(el.target.value)} />
-                <p>Mins</p>
-            </div>
-            {/* start pomodoro */}
-            <img src={require('../../images/play-buttton.png')} className={classes.todoStart} />
-            {/* <img onClick={() => updateButtonOnTodo("play")} src={require('../../images/pause.png')} className={classes.todoStart} /> */}
-            {/* edit todo */}
-            <p className={classes.editLink}>Edit</p>
-            {/* delete todo item */}
-            <p className={classes.deleteLink}>Delete</p>
-        </div>
+                            <p className={classes.deleteLink}>Delete</p>
+                        </div>
+                );
+            })
+        }
         </div>
     </div>
   )

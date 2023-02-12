@@ -25,21 +25,21 @@ const RoutinePlus = () => {
   let handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let res = await fetch("https://localhost:8000/routineplus", {
+      let res = await fetch("http://localhost:8000/todoapi/subject/", {
         method: "POST",
         body: JSON.stringify({
-          subject1:subject1,
-          subject1credit:subject1credit,
-          subject2:subject2,
-          subject2credit:subject2credit,
-          subject3:subject3,
-          subject3credit:subject3credit,
-          subject4:subject4,
-          subject4credit:subject4credit,
-          subject5:subject5,
-          subject5credit:subject5credit,
-          subject6:subject6,
-          subject6credit:subject6credit,
+          name:subject1,
+          credit:subject1credit,
+          // subject2:subject2,
+          // subject2credit:subject2credit,
+          // subject3:subject3,
+          // subject3credit:subject3credit,
+          // subject4:subject4,
+          // subject4credit:subject4credit,
+          // subject5:subject5,
+          // subject5credit:subject5credit,
+          // subject6:subject6,
+          // subject6credit:subject6credit,
         }),
       });
       let resJson = await res.json();
@@ -47,22 +47,22 @@ const RoutinePlus = () => {
         setSubject1("");
         setSubject1Credit("");
 
-        setSubject2("");
-        setSubject2Credit("");
+        // setSubject2("");
+        // setSubject2Credit("");
 
-        setSubject3("");
-        setSubject3Credit("");
-
-
-        setSubject4("");
-        setSubject4Credit("");
-
-        setSubject5("");
-        setSubject5Credit("");
+        // setSubject3("");
+        // setSubject3Credit("");
 
 
-        setSubject6("");
-        setSubject6Credit("");
+        // setSubject4("");
+        // setSubject4Credit("");
+
+        // setSubject5("");
+        // setSubject5Credit("");
+
+
+        // setSubject6("");
+        // setSubject6Credit("");
 
         console.log("data submitted successfully");
 
