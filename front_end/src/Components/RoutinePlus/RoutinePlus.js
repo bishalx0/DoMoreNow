@@ -25,7 +25,7 @@ const RoutinePlus = () => {
   let handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let res = await fetch("https://localhost:3000/", {
+      let res = await fetch("https://localhost:8000/routineplus", {
         method: "POST",
         body: JSON.stringify({
           subject1:subject1,

@@ -11,9 +11,11 @@ import StackedLineChartIcon from '@mui/icons-material/StackedLineChart';
 import PublicOffIcon from '@mui/icons-material/PublicOff';
 import PendingActionsIcon from '@mui/icons-material/PendingActions';
 import Image from "rc-image";
+import Header from "../UserAdminPanel/adminComponents/Header";
+import Logo from "../UserAdminPanel/adminComponents/Logo";
 
 const Main = () => {
-    const [itemClicked,updateItemClicked] = useState("todo");
+    const [itemClicked,updateItemClicked] = useState("pomodoro");
     let component = <div className="pomodoroCollection">
     <Pomodoro />
     {/* Task Title */}
@@ -46,11 +48,17 @@ const Main = () => {
         console.log(itemClicked);
     })
     return (
-      <>
-        <div className="userDashboardHeader lg:container">
-            <img src={require('../../images/logo-transparent.png')} alt="WeDoMore" className="logo" style={{height:'90px',width:'90px',borderBottom:'1px solid #d0caca',paddingBottom:'10px'}}/>
-
+      <>    
+        <div className="">
+            <Logo />
         </div>
+        {/** <div className="userDashboardHeader lg:container" style={{borderBottom:'1px solid #222'}}>
+                <div className="flex text-center">
+                <Logo  className="justify-items-start"/>
+                      <Header className="justify-items-end text-center "/> 
+                </div>
+        </div>*/}
+        
         <div className={classes.main}>
             {/* side navbar vertical */}
             <div className={classes.verticalNavbar}>

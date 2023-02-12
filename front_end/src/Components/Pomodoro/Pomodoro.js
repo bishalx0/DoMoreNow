@@ -15,6 +15,7 @@ const Pomodoro = () => {
   const [breakMinutes, setBreakMinutes] = useState(1);
 
   return (
+    
     <div className="pomodoro">
       <main>
         <SettingsContext.Provider

@@ -13,11 +13,13 @@ import Chart from "react-apexcharts";
 const home = () => {
   return (
     <div className="home">
-      <Header />
+      <div className="flex pl-5">
+      <h1 className="text-center text-2xl font-semibold justify-start">User Statistics</h1>
+      </div>
       <hr />
       <div className="userInfo"></div>
       <div className="homeContainer px-5"> 
-      <h2 className="text-xl">Activities</h2>
+      <h2 className="text-2xl font-bold">Activities</h2>
         <div className="contentContainer flex justify-between gap-20 pt-10">
             <DayStreak className="text-xl" />
             <TimeFocus />
@@ -25,7 +27,7 @@ const home = () => {
             <TaskCompleteD />
         </div>
         <div className="report bg-primary pt-10 px-5 mt-10">
-        <h1>Usage Statistics</h1>
+        <h1 className="text-2xl font-bold">Usage Statistics</h1>
         <div className="flex">
 
         <DailyStats />
