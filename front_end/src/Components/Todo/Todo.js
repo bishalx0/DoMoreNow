@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react';
+import React,{useEffect, useState , useRef} from 'react';
 import PlayButton from '../Pomodoro/PomoComponents/PlayButton';
 import classes from './Todo.module.css';
 
@@ -6,6 +6,7 @@ const Todo = () => {
     const [todoTitle,updateTodoTitle] = useState('');
     const [hr,updateHr] = useState(0);
     const [min,updateMin] = useState(0);
+
 
     const [todoCollection,updateTodoCollection] = useState([]);
 
@@ -115,24 +116,27 @@ const Todo = () => {
                 return(
                         <div className={classes.todoItem} key={todo.id}>
                             {/* mark as done input */}
-                            <input type="checkbox" className={classes.markDone} />
+                            <input type="checkbox" className={classes.markDone} onClick={() => {
+                                localStorage.setItem('focus',focusTime);
+                                localStorage.setItem('break',breakTime);
+                                window.location.reload(true);
+                            }
+                            }/>
                             {/* todo title name */}
                             <h3 className={classes.todoItemTitle}>{todo.todoTitle}</h3>
                             {/* focus timer set */}
                             <div className={classes.focusTimeBox}>
                                 <p style={{marginRight:'5px'}}>Focus:</p>
-                                <input type="number" className={classes.focusTimeSet} min="20" max="45" />
+                                <input type="number" className={classes.focusTimeSet} value={focusTime} onChange={(el) => updateFocusTime(el.target.value)} min="20" max="45" />
                                 {/*<p>Mins</p>*/}
                             </div>
                             {/* break timer set */}
                             <div className={classes.breakTimeBox}>
                                 <p style={{marginRight:'5px'}}>Break:</p>
-                                <input type="number" className={classes.breakTimeSet} min="5" max="15" />
+                                <input type="number" className={classes.breakTimeSet} value={breakTime} onChange={(el) => updateBreakTime(el.target.value)} min="5" max="15" />
                                 {/*<p>Mins</p>*/}
                             </div>
                             {/* start pomodoro */}
-                            <img src={require('../../images/play-buttton.png')} className={classes.todoStart} />
-                            <PlayButton />
                             {/*<img onClick={() => updateButtonOnTodo("play")} src={require('../../images/pause.png')} className={classes.todoStart} /> *}
                             {/* edit todo */}
                             <p className={classes.editLink} style={{display:'none'}}>Edit</p>

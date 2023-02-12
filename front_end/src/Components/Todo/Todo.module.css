@@ -74,6 +74,10 @@
     align-items: center;
     border: 2px solid green;
     margin: 10px 0px;
+    padding:5px 8px;
+    border:0.5px solid #777;
+    border-radius: 7px;
+    font-size: 1.25rem;
 }
 
 .markDone{
@@ -90,13 +94,15 @@
 .focusTimeBox , .breakTimeBox{
     width: 15%;
     display: flex;
+
     justify-content: center;
     align-items: center;
 }
 
 .focusTimeSet , .breakTimeSet{
-    height: 15px;
-    border: 1px solid #84D7EC;
+    padding:2px 3px;
+    border:0.5px solid #777;
+    text-align: center;
 }
 
 .todoStart{

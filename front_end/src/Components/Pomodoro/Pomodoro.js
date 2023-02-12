@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Timer from "./PomoComponents/Timer";
 import Settings from "./PomoComponents/Settings";
 import {useState} from 'react';
@@ -12,8 +12,15 @@ import Todo from "../Todo/Todo";
 
 const Pomodoro = () => {
   const [showSettings, setShowSettings] = useState(false);
-  const [FocusTimeMinutes, setFocusTimeMinutes] = useState(25);
-  const [breakMinutes, setBreakMinutes] = useState(10);
+  const [FocusTimeMinutes, setFocusTimeMinutes] = useState(30);
+  const [breakMinutes, setBreakMinutes] = useState(5);
+
+  useEffect(() => {
+    setFocusTimeMinutes(localStorage.getItem('focus'));
+
+    setBreakMinutes(localStorage.getItem('break'));
+
+  })
 
 
   return (
