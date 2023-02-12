@@ -1,0 +1,32 @@
+.inputBox{
+    display: flex;
+    width : 60%;
+    margin : 10px 20%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.siteNameBox{
+    width : 70%;
+    /* height: 35px; */
+    padding : 15px 25px;
+    border: 2px solid #e67e22;
+    border-radius: 15px;
+}
+
+.addButton{
+    border: 2px solid #e67e22;
+    padding : 10px 25px;
+    /* height: 20px; */
+    text-align: center;
+    width: 15%;
+    border-radius: 15px;
+    background-color: #e67e22;
+    color: #fff;
+    cursor: pointer;
+}
+
+.addButton:hover{
+    color: #e67e22;
+    background-color: #fff;
+}

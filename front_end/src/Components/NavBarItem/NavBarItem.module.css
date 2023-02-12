@@ -1,0 +1,10 @@
+.navbarItem{
+    cursor: pointer;
+    text-decoration: none;
+    color: #d0caca;
+    transform: 0.3s all ease-in-out;
+}
+
+.navbarItem:hover{
+    color: #fff;
+}

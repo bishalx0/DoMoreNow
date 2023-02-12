@@ -1,0 +1,65 @@
+
+.appContainer{
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(#84D7EC,#F8FBFF);
+}
+
+.navbarContainer{
+  background-color: #fff;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+}
+
+.logoContainer{
+  background-color: #fff;
+  height: 150px;
+  width: 150px;
+  position : absolute;
+  border-radius : 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 80px;
+}
+
+.logo{
+  height: 100px;
+  width: 100px;
+}
+
+.welcomeContainer{
+  height : 80vh;
+  background : linear-gradient(#2193b0,#6dd5ed);
+  display : flex;
+  font-family: 'Roboto Mono';
+}
+
+.welcomepageplayerimageContainer{
+  height: 100%;
+  width: 30%;
+}
+
+.welcomText{
+  height: 100%;
+  width: 70%;
+  color: #fff;
+}
+
+.welcomeText h1{
+  font-size: 50px;
+}
+
+.welcomeSecondHeading{
+  font-size: 30px;
+}
+
+.buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+}
+
+
